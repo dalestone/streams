@@ -1,0 +1,14 @@
+<div *ngIf="dots" class="dots">
+    <div class="dot" [ngClass]="{ 'active' : i == _index }" *ngFor="let dot of _dots; let i = index" (click)="next(i)"></div>
+</div>
+<div class="streams" (swipeleft)="onSwipeLeft($event)" (swiperight)="onSwipeRight($event)">
+    <div *ngFor="let stream of _streams[_index]" class="stream">
+        <header>{{ stream?.title }}</header>
+        <section>
+            <div *ngFor="let message of _messages" class="message">
+                Message Content
+            </div>
+        </section>
+    </div>
+</div>
+

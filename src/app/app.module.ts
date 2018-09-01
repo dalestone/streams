@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ActivityStreams } from './activity-streams/activity-streams.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ActivityStreams
   ],
   imports: [
     BrowserModule
